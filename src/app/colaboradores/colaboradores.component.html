@@ -1,0 +1,37 @@
+<div class="container">
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let colaborador of colaboradores">
+                    <td>{{colaborador.id}}</td>
+                    <td>{{colaborador.nome}}</td>
+                    <td>{{colaborador.cpf}}</td>
+                    <td>
+                        <button (click)="editar(colaborador)">Editar</button>
+                        <button (click)="apagar(colaborador)">Apagar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <div>
+            <label for="campo-nome">Nome</label>
+            <input type="text" id="campo-nome" [(ngModel)]="colaborador.nome">
+        </div>
+        <div>
+            <label for="campo-cpf">CPF</label>
+            <input type="text" id="campo-cpf" [(ngModel)]="colaborador.cpf">
+        </div>
+        <button (click)="cadastrar()">Cadastrar</button>
+    </div>
+</div>

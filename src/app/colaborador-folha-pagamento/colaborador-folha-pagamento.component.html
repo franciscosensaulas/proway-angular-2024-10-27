@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="folha-pagamento">
+        <div>
+            <label for="campo-nome">Nome</label>
+            <input type="text" id="campo-nome" [(ngModel)]="nome">
+        </div>
+
+        <div>
+            <label for="campo-quantidade-horas">Quantidade horas</label>
+            <input type="number" id="campo-quantidade-horas" [(ngModel)]="quantidadeHoras">
+        </div>
+
+        <div>
+            <label for="campo-valor-hora">Valor Hora</label>
+            <input type="number" id="campo-valor-hora" [(ngModel)]="valorHora" step="0.5">
+        </div>
+
+        <div>
+            <label for="campo-deconto">Descontos</label>
+            <input type="number" id="campo-deconto" [(ngModel)]="descontos">
+        </div>
+
+        <div>
+            <label for="campo-acrescimos">Acrescimos</label>
+            <input type="number" id="campo-acrescimos" [(ngModel)]="acrescimos">
+        </div>
+
+        <div class="botoes">
+            <button (click)="calcularSalario()">Calcular Salário</button>
+        </div>
+
+        @if(salarioBruto !== undefined){
+        <span>Salário Bruto: {{salarioBruto}}</span>
+        <span>Salário Líquido: {{salarioLiquido}}</span>
+        }
+    </div>
+</div>

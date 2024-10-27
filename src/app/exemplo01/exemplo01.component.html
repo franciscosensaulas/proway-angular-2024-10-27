@@ -1,0 +1,18 @@
+<h1>Olá mundo</h1>
+<div>
+    <span>Nome Completo: </span><span>{{nomeCompleto}}</span>
+</div>
+<div>
+    <span>Idade: </span><span>{{idade}}</span>
+</div>
+
+@if(anoNascimento !== undefined){
+<div>
+    <span>Ano Nascimento: {{anoNascimento}}</span>
+</div>
+} @else {
+<div>
+    <span>Não foi realizado o calculo do ano de nascimento</span> 
+    <button (click)="calcular()">Calcular</button>
+</div>
+}
