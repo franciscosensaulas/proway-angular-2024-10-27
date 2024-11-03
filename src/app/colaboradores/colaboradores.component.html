@@ -1,5 +1,10 @@
 <div class="container">
-    <div>
+    <div class="table-container">
+        <button (click)="popularTabela()" *ngIf="colaboradores.length === 0">Popular</button>
+        <div *ngIf="colaboradores.length !== 0">
+            <label for="campo-pesquisa">Pesquisa</label>
+            <input type="text" [(ngModel)]="pesquisa" (keydown.enter)="filtrar()">
+        </div>
         <table>
             <thead>
                 <tr>
@@ -10,28 +15,28 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let colaborador of colaboradores">
+                <tr *ngFor="let colaborador of colaboradoresApresentados">
                     <td>{{colaborador.id}}</td>
                     <td>{{colaborador.nome}}</td>
                     <td>{{colaborador.cpf}}</td>
                     <td>
-                        <button (click)="editar(colaborador)">Editar</button>
-                        <button (click)="apagar(colaborador)">Apagar</button>
+                        <button (click)="editar(colaborador)" class="btn editar">Editar</button>
+                        <button (click)="apagar(colaborador)" class="btn apagar">Apagar</button>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-    <div>
-        <div>
+    <div class="form-container">
+        <div class="form-group">
             <label for="campo-nome">Nome</label>
             <input type="text" id="campo-nome" [(ngModel)]="colaborador.nome">
         </div>
-        <div>
+        <div class="form-group">
             <label for="campo-cpf">CPF</label>
             <input type="text" id="campo-cpf" [(ngModel)]="colaborador.cpf">
         </div>
-        <button (click)="cadastrar()">Cadastrar</button>
+        <button (click)="cadastrar()" class="btn cadastrar">Cadastrar</button>
     </div>
 </div>

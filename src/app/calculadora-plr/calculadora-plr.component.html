@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="campos">
+        <div class="form-group">
+            <label for="salario-bruto">Salário Bruto</label>
+            <input type="number" step="0.02" id="salario-bruto" [(ngModel)]="form.salarioBruto">
+        </div>
+        <div class="form-group">
+            <label for="multiplicador">Multiplicador</label>
+            <input type="number" step="0.50" id="multiplicador" [(ngModel)]="form.multiplicador">
+        </div>
+        <button (click)="calcularValorPlrBruto()">Calcular PLR Bruto</button>
+        <button (click)="calcularValorPlrLiquido()">Calcular PLR Liquido</button>
+
+        <span>PLR Bruto: {{form.valorPlrBruto}}</span>
+    </div>
+    <div class="resultado">
+        <app-calculadora-ir [plrBruto]="form.valorPlrBruto"></app-calculadora-ir>
+    </div>
+</div>
