@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>Lista de despesas</h1>
+
+    <a class="nav-link" ngClass="botao-cadastro" routerLink="/despesas/cadastro">Cadastro</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Valor</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let despesa of despesas">
+                <td>{{despesa.id}}</td>
+                <td>{{despesa.nome}}</td>
+                <td>{{despesa.valor}}</td>
+                <td>
+                    <button ngClass="btn btn-editar" (click)="editar(despesa.id)">Editar</button>
+                    <button ngClass="btn btn-apagar" (click)="apagar(despesa.id)">Apagar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

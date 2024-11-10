@@ -1,0 +1,32 @@
+{
+  "despesas": [
+    {
+      "id": "1",
+      "nome": "Internet",
+      "valor": 130
+    },
+    {
+      "id": "2",
+      "nome": "Água",
+      "valor": 100
+    },
+    {
+      "nome": "Netflix 1",
+      "valor": 55.9,
+      "id": "3"
+    },
+    {
+      "nome": "Flocos de neve",
+      "valor": 10001,
+      "id": "f41c"
+    },
+    {
+      "nome": "Unifique",
+      "valor": 120,
+      "id": "bb07"
+    }
+  ],
+  "categorias":[
+    
+  ]
+}
