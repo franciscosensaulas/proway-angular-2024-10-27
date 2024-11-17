@@ -31,5 +31,37 @@
       "id": "7ed5",
       "nome": "Transporte"
     }
+  ],
+  "entradas": [
+    {
+      "id": "1",
+      "nome": "Salário",
+      "valor": 2000.35,
+      "pendente": true,
+      "data": "2024-12-01",
+      "idCategoria": 1,
+      "descricao": "Salário da empresa XPTO",
+      "cliente": "PF"
+    },
+    {
+      "nome": "13",
+      "valor": 2000,
+      "data": "2024-12-30T03:00:00.000Z",
+      "pendente": false,
+      "idCategoria": "",
+      "descricao": "Deu boa",
+      "cliente": "PF",
+      "id": "a537"
+    },
+    {
+      "nome": "Arroz",
+      "valor": 222,
+      "data": "2024-11-01T03:00:00.000Z",
+      "pendente": true,
+      "idCategoria": "",
+      "descricao": "AAA",
+      "cliente": "PF",
+      "id": "b27e"
+    }
   ]
 }

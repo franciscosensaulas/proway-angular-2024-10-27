@@ -1,0 +1,37 @@
+<p-dialog [header]="tituloDialog" 
+    [modal]="true"
+    [maximizable]="true"
+    [(visible)]="dialogVisivel" [style]="{ width: '25rem' }" 
+    (onHide)="fecharDialogo()">
+    <div class="flex align-items-center gap-3 mb-3">
+        <label for="nome" class="font-semibold w-6rem">Nome</label>
+        <input pInputText id="nome" class="flex-auto" [(ngModel)]="form.nome"/>
+    </div>
+    <div class="flex align-items-center gap-3 mb-3">
+        <label for="valor" class="font-semibold w-6rem">Valor</label>
+        <p-inputNumber inputId="valor" class="flex-auto" currency="BRL" locale="pt-BR"  [(ngModel)]="form.valor"/>
+    </div>
+    <div class="flex align-items-center gap-3 mb-3">
+        <label for="data" class="font-semibold w-6rem">Data</label>
+        <p-calendar inputId="data" class="flex-auto" [appendTo]="'body'" [(ngModel)]="form.data"/>
+    </div>
+    <div class="flex mb-3">
+        <p-checkbox inputId="pendente" class="mr-1" [(ngModel)]="form.pendente" [binary]="true"/>
+        <label for="pendente" class="font-semibold w-6rem">Pendente</label>
+    </div>
+    <div class="flex align-items-center gap-3 mb-3">
+        <label for="descricao" class="font-semibold w-6rem">Descrição</label>
+        <textarea id="descricao" class="flex-auto" pInputTextarea [(ngModel)]="form.descricao"></textarea>
+    </div>
+
+    <div class="flex mb-3">
+        <p-radioButton inputId="cliente-pf" class="mr-1" [(ngModel)]="form.cliente" value="PF"/>
+        <label for="cliente-pf" class="font-semibold w-6rem">PF</label>
+        <p-radioButton inputId="cliente-pj" class="mr-1" [(ngModel)]="form.cliente" value="PJ"/>
+        <label for="cliente-pj" class="font-semibold w-6rem">PJ</label>
+    </div>
+    <div class="flex justify-content-end gap-2">
+        <p-button label="Cancelar" icon="pi pi-times" severity="secondary" (onClick)="fecharDialogo()" />
+        <p-button label="Salvar" icon="pi pi-save" (onClick)="salvar()" />
+    </div>
+</p-dialog>

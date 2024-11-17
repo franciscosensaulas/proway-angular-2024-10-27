@@ -9,6 +9,7 @@ import { EditarDespesaComponent } from './despesas/editar-despesa/editar-despesa
 import { CadastroCategoriaComponent } from './categorias/cadastro-categoria/cadastro-categoria.component';
 import { ListaDespesasComponent } from './despesas/lista-despesas/lista-despesas.component';
 import { ListaCategoriasComponent } from './categorias/lista-categorias/lista-categorias.component';
+import { ListaEntradaComponent } from './entradas/lista-entrada/lista-entrada.component';
 
 export const routes: Routes = [
     { path: "colaborador", component: ColaboradorFolhaPagamentoComponent },
@@ -21,4 +22,6 @@ export const routes: Routes = [
     { path: "categorias/editar/:id", component: EditarCategoriaComponent },
     { path: "lista-categorias", component: ListaCategoriasComponent },
     { path: "categorias/cadastro", component: CadastroCategoriaComponent },
+
+    { path: "lista-entradas", component: ListaEntradaComponent },
 ];

@@ -1,0 +1,42 @@
+<p-toast />
+<p-confirmDialog />
+
+<app-cadastro-entrada 
+    [dialogVisivel]="visivel"
+    [tituloDialog]="tituloDialog"
+    (cadastroFinalizado)="fecharDialog($event)"/>
+
+<div class="card m-3 flex flex-column gap-2">
+    <div class="flex justify-content-end">
+        <p-button label="Cadastrar" icon="pi pi-plus" severity="info" (onClick)="abrirModalCadastrar()"></p-button>
+    </div>
+    <p-table 
+        [value]="entradas"
+        styleClass="p-datatable-striped"
+        [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Valor</th>
+                <th>Status</th>
+                <th>Ação</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-entrada>
+            <tr>
+                <td>{{ entrada.id }}</td>
+                <td>{{ entrada.nome }}</td>
+                <td>{{ entrada.valor }}</td>
+                <td>
+                    <p-tag [severity]="obterStatus(entrada.pendente)" [value]="obterTexto(entrada.pendente)"></p-tag>
+                </td>
+                <td>
+                    <p-button label="Editar" severity="info" icon="pi pi-pencil" styleClass="mr-2"
+                        (onClick)="abrirModalEditar(entrada.id)"></p-button>
+                    <p-button label="Apagar" severity="danger" icon="pi pi-trash" [outlined]="true" (onClick)="confirmarExclusao($event, entrada)"></p-button>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
