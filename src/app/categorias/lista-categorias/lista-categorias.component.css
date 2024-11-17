@@ -1,0 +1,70 @@
+.container{
+    margin: 0px 10px;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.botao-cadastro{
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.botao-cadastro:hover{
+    background-color: #218838;
+    cursor: pointer;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+table th, table td{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table th{
+    background-color: #3b66ff;
+    color: white;
+    text-align: left;
+}
+
+table tr:nth-child(even){
+    background-color: #f9f9f9;
+}
+
+table tr:hover{
+    background-color: #ddd;
+}
+
+.btn{
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.btn-editar{
+    background-color: #007bff;
+}
+.btn-editar:hover{
+    background-color: #0069d9;
+}
+.btn-apagar{
+    background-color: #dc3545;
+}
+.btn-apagar:hover{
+    background-color: #c82333;
+}

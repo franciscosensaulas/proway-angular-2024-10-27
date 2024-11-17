@@ -26,7 +26,10 @@
       "id": "bb07"
     }
   ],
-  "categorias":[
-    
+  "categorias": [
+    {
+      "id": "7ed5",
+      "nome": "Transporte"
+    }
   ]
 }

@@ -1,0 +1,8 @@
+<div class="formulario">
+    <div ngClass="form-group">
+        <label for="campo-nome">Nome</label>
+        <input ngClass="form-control" type="text" id="campo-nome"[(ngModel)]="form.nome">
+    </div>
+    
+    <button (click)="salvar()" ngClass="btn btn-salvar">Salvar</button>
+</div>

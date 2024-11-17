@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>Lista de Categorias</h1>
+
+    <a class="nav-link" routerLink="/categorias/cadastro" class="botao-cadastro">
+        Cadastro</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let categoria of categorias">
+                <td>{{categoria.id}}</td>
+                <td>{{categoria.nome}}</td>
+                <td>
+                    <button class="btn btn-editar" (click)="editar(categoria.id)">Editar</button>
+                    <button class="btn btn-apagar" (click)="apagar(categoria.id)">Apagar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</div>
